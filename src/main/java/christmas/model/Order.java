@@ -1,21 +1,20 @@
 package christmas.model;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 
 public class Order {
-    public static List<String> orderedMenu = new ArrayList<String>();
-    public static List<Integer> orderedCount = new ArrayList<Integer>();
+    public static Map<String, Integer> userOrder = new HashMap<String, Integer>();
 
     public static void receiveOrder(String input) {
-        List<String> orders = Arrays.asList(input.split(","));
+        List<String> separatedOrder = Arrays.asList(input.split(","));
 
-        for (int i = 0; i < orders.size(); i++) {
-            List<String> separatedOrders = Arrays.asList(orders.get(i).split("-"));
+        for (int i = 0; i < separatedOrder.size(); i++) {
+            List<String> orderInformation = Arrays.asList(separatedOrder.get(i).split("-"));
 
-            orderedMenu.add(separatedOrders.get(0));
-            orderedCount.add(Integer.valueOf(separatedOrders.get(1)));
+            userOrder.put(orderInformation.get(0), Integer.valueOf(orderInformation.get(1)));
         }
     }
 }

@@ -20,8 +20,8 @@ public class Utils {
     public static boolean isDessert() {
         boolean result = false;
 
-        for (int i = 0; i < Order.orderedMenu.size(); i++) {
-            if (MenuCategory.dessert.contains(Order.orderedMenu.get(i))) {
+        for (int i = 0; i < Order.userOrder.size(); i++) {
+            if (MenuCategory.dessert.contains(Order.userOrder.get(i))) {
                 result = true;
             }
         }
@@ -31,8 +31,8 @@ public class Utils {
     public static boolean isMainDish() {
         boolean result = false;
 
-        for (int i = 0; i < Order.orderedMenu.size(); i++) {
-            if (MenuCategory.mainDish.contains(Order.orderedMenu.get(i))) {
+        for (int i = 0; i < Order.userOrder.size(); i++) {
+            if (MenuCategory.mainDish.contains(Order.userOrder.get(i))) {
                 result = true;
             }
         }
@@ -40,8 +40,8 @@ public class Utils {
     }
 
     public static void getDessertIndex() {
-        for (int i = 0; i < Order.orderedMenu.size(); i++) {
-            if (MenuCategory.dessert.contains(Order.orderedMenu.get(i))) {
+        for (int i = 0; i < Order.userOrder.size(); i++) {
+            if (MenuCategory.dessert.contains(Order.userOrder.get(i))) {
                 dessertIndex.add(i);
             }
         }
