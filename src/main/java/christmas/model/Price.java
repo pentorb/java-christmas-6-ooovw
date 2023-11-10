@@ -2,6 +2,7 @@ package christmas.model;
 
 public class Price {
     public static int amountOfPrice;
+    public static int totalPrice;
 
     public static int getPriceOfMenu(String menu) {
         Menu.putNames();
@@ -21,5 +22,9 @@ public class Price {
             int numberOfMenu = Order.userOrder.get(Order.orderedMenu.get(i));
             amountOfPrice += numberOfMenu * getPriceOfMenu(Order.orderedMenu.get(i));
         }
+    }
+
+    public static void findTotalPrice() {
+        totalPrice = amountOfPrice - Discount.amountOfDiscount;
     }
 }
