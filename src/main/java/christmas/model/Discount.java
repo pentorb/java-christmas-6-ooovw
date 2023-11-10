@@ -30,4 +30,11 @@ public class Discount {
             weekdayDiscount = 2023 * MenuCategory.amountOfDessert;
         }
     }
+
+    private void receiveWeekendDiscount(int date) {
+        if ((Utils.getDayOfWeek(date) > 4) && (Utils.getDayOfWeek(date) < 7)) {
+            MenuCategory.countMainDish();
+            weekendDiscount = 2023 * MenuCategory.amountOfMainDish;
+        }
+    }
 }
