@@ -37,4 +37,12 @@ public class Discount {
             weekendDiscount = 2023 * MenuCategory.amountOfMainDish;
         }
     }
+
+    private void receiveSpecialDiscount(int date) {
+        specialDiscount = 0;
+        
+        if ((Utils.getDayOfWeek(date) == 7) || (date == 25)) {
+            specialDiscount = 1000;
+        }
+    }
 }
