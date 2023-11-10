@@ -1,5 +1,8 @@
 package christmas.model;
 
+import christmas.utils.Utils;
+import org.mockito.internal.matchers.Or;
+
 public class Discount {
     public static int amountOfDiscount;
     public static int dDayDiscount;
@@ -19,6 +22,22 @@ public class Discount {
 
         if (date > 25) {
             dDayDiscount = 0;
+        }
+    }
+
+    private void receiveWeekdayDiscount(int date) {
+        if ((Utils.getDayOfWeek(date) <= 4) || (Utils.getDayOfWeek(date) == 7)) {
+            if(Utils.isDessert()) {
+                Utils.getDessertIndex();
+            }
+
+            int dessertCount = 0;
+
+            for (int i = 0; i < Utils.dessertIndex.size(); i++) {
+                dessertCount += Order.orderedCount.get(Utils.dessertIndex.get(i));
+            }
+
+            weekdayDiscount = 2023 * dessertCount
         }
     }
 }
