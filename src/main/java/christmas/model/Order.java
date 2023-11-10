@@ -1,12 +1,10 @@
 package christmas.model;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.HashMap;
+import java.util.*;
 
 public class Order {
     public static Map<String, Integer> userOrder = new HashMap<String, Integer>();
+    public static List<String> orderedMenu;
 
     public static void receiveOrder(String input) {
         List<String> separatedOrder = Arrays.asList(input.split(","));
@@ -16,5 +14,9 @@ public class Order {
 
             userOrder.put(orderInformation.get(0), Integer.valueOf(orderInformation.get(1)));
         }
+    }
+
+    public static void arrangeOrder() {
+        orderedMenu = new ArrayList<>(userOrder.keySet());
     }
 }
