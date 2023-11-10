@@ -18,11 +18,14 @@ public class Utils {
     }
 
     public static boolean isDessert() {
+        boolean result = false;
+
         for (int i = 0; i < Order.orderedMenu.size(); i++) {
             if (MenuCategory.dessert.contains(Order.orderedMenu.get(i))) {
-                return true;
+                result = true;
             }
         }
+        return result;
     }
 
     public static void getDessertIndex() {
