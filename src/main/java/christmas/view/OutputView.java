@@ -25,4 +25,18 @@ public class OutputView {
 
         System.out.println();
     }
+
+    public void printPresent(int price) {
+        System.out.println("<증정 메뉴>");
+
+        if (price == 0) {
+            System.out.println("없음");
+        }
+
+        if (price > 0) {
+            System.out.println("샴페인 1개");
+        }
+
+        System.out.println();
+    }
 }
