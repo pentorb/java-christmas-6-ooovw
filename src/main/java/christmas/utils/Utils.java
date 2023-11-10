@@ -13,25 +13,4 @@ public class Utils {
         DayOfWeek dayOfVisit = dateOfVisit.getDayOfWeek();
         return dayOfVisit.getValue();
     }
-
-    public static boolean isDessert() {
-        boolean result = false;
-
-        for (int i = 0; i < MenuCategory.dessert.size(); i++)
-            if (Order.userOrder.containsKey(MenuCategory.dessert.get(i))) {
-                result = true;
-            }
-        return result;
-    }
-
-    public static boolean isMainDish() {
-        boolean result = false;
-
-        for (int i = 0; i < MenuCategory.mainDish.size(); i++) {
-            if (Order.userOrder.containsKey(MenuCategory.mainDish.get(i))) {
-                result = true;
-            }
-        }
-        return result;
-    }
 }
