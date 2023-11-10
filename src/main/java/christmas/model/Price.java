@@ -15,4 +15,11 @@ public class Price {
 
         return priceOfMenu;
     }
+
+    public static void addPrice() {
+        for (int i = 0; i < Order.orderedMenu.size(); i++) {
+            int numberOfMenu = Order.userOrder.get(Order.orderedMenu.get(i));
+            amountOfPrice += numberOfMenu * getPriceOfMenu(Order.orderedMenu.get(i));
+        }
+    }
 }
