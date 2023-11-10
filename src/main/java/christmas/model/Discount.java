@@ -37,7 +37,7 @@ public class Discount {
                 dessertCount += Order.orderedCount.get(Utils.dessertIndex.get(i));
             }
 
-            weekdayDiscount = 2023 * dessertCount
+            weekdayDiscount = 2023 * dessertCount;
         }
     }
 }
