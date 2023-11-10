@@ -45,4 +45,12 @@ public class Discount {
             specialDiscount = 1000;
         }
     }
+
+    private void receivePresent() {
+        present = 0;
+
+        if (Price.amountOfPrice >= 120_000) {
+            present = Menu.CHAMPAGNE.getPrice();
+        }
+    }
 }
