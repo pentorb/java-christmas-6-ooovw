@@ -53,4 +53,14 @@ public class Discount {
             present = Menu.CHAMPAGNE.getPrice();
         }
     }
+
+    public void receiveDiscount(int date) {
+        receiveDDayDiscount(date);
+        receiveWeekdayDiscount(date);
+        receiveWeekendDiscount(date);
+        receiveSpecialDiscount(date);
+        receivePresent();
+
+        amountOfDiscount = dDayDiscount + weekdayDiscount + weekendDiscount + specialDiscount + present;
+    }
 }
