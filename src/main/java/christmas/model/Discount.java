@@ -1,7 +1,6 @@
 package christmas.model;
 
 import christmas.utils.Utils;
-import org.mockito.internal.matchers.Or;
 
 public class Discount {
     public static int amountOfDiscount;
