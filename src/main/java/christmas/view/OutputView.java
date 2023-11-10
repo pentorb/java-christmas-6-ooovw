@@ -1,7 +1,6 @@
 package christmas.view;
 
-import christmas.model.Order;
-
+import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Map;
 
@@ -13,6 +12,16 @@ public class OutputView {
             System.out.println(orderedMenu.get(i));
             System.out.printf(" %d개", userOrder.get(orderedMenu.get(i)));
         }
+
+        System.out.println();
+    }
+
+    public void printAmountOfPrice(int price) {
+        System.out.println("<할인 전 총주문 금액>");
+
+        DecimalFormat priceFormat = new DecimalFormat("###,##0");
+        String notDiscountedPrice = priceFormat.format(price);
+        System.out.println(notDiscountedPrice + "원");
 
         System.out.println();
     }
