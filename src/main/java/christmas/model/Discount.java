@@ -26,17 +26,8 @@ public class Discount {
 
     private void receiveWeekdayDiscount(int date) {
         if ((Utils.getDayOfWeek(date) <= 4) || (Utils.getDayOfWeek(date) == 7)) {
-            if(Utils.isDessert()) {
-                Utils.getDessertIndex();
-            }
-
-            int dessertCount = 0;
-
-            for (int i = 0; i < Utils.dessertIndex.size(); i++) {
-                dessertCount += Order.orderedCount.get(Utils.dessertIndex.get(i));
-            }
-
-            weekdayDiscount = 2023 * dessertCount;
+            MenuCategory.countDessert();
+            weekdayDiscount = 2023 * MenuCategory.amountOfDessert;
         }
     }
 }
