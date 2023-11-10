@@ -1,5 +1,9 @@
 package christmas.model;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public enum Menu {
 
     MUSHROOM_SOUP("애피타이저", "양송이수프", 6_000),
@@ -14,6 +18,8 @@ public enum Menu {
     ZERO_COKE("음료", "제로콜라", 3_000),
     RED_WINE("음료", "레드와인", 60_000),
     CHAMPAGNE("음료", "샴페인", 25_000);
+
+    public static List<Menu> constantOfMenu = new ArrayList<>();
 
     private String category;
     private String name;
@@ -35,5 +41,9 @@ public enum Menu {
 
     public int getPrice() {
         return price;
+    }
+
+    public static void putNames(){
+        constantOfMenu = Arrays.asList(MUSHROOM_SOUP, TAPAS, CAESAR_SALAD, T_BONE_STEAK, BARBEQUE_RIB, SEAFOOD_PASTA, CHRISTMAS_PASTA, CHOCO_CAKE, ICE_CREAM, ZERO_COKE, RED_WINE, CHAMPAGNE);
     }
 }
