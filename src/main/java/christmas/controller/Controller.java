@@ -14,4 +14,10 @@ public class Controller {
         Discount.receiveDiscountOfDate(InputView.readDate());
         Order.receiveOrder(InputView.readOrder());
     }
+
+    private static void calculateBenefit() {
+        Price.findPrice();
+        Discount.receivePresent();
+        Badge.receiveBadge();
+    }
 }
