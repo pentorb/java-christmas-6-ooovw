@@ -46,7 +46,7 @@ public class Discount {
         }
     }
 
-    private static void receivePresent() {
+    public static void receivePresent() {
         present = 0;
 
         if (Price.amountOfPrice >= 120_000) {
