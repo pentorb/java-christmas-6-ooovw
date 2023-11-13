@@ -43,4 +43,12 @@ public class OutputView {
     public void printDiscountMessage() {
         System.out.println("<혜택 내역>\n");
     }
+
+    public void printDDayDiscount(int discount) {
+        if (discount > 0) {
+            DecimalFormat discountFormat = new DecimalFormat("-###,##0");
+            String number = discountFormat.format(discount);
+            System.out.print("크리스마스 디데이 할인: " + number + "원\n");
+        }
+    }
 }
