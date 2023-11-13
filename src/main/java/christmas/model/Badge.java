@@ -16,10 +16,6 @@ public enum Badge {
         this.discount = discount;
     }
 
-    private String getShape() {
-        return shape;
-    }
-
     private int getDiscount() {
         return discount;
     }
