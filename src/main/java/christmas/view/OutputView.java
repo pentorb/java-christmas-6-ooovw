@@ -1,5 +1,7 @@
 package christmas.view;
 
+import christmas.model.Discount;
+
 import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Map;
@@ -42,6 +44,10 @@ public class OutputView {
 
     public void printDiscountMessage() {
         System.out.println("<혜택 내역>\n");
+
+        if (Discount.amountOfDiscount == 0) {
+            System.out.println("없음");
+        }
     }
 
     public void printDDayDiscount(int discount) {
