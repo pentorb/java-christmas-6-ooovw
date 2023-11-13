@@ -15,4 +15,10 @@ public class Validation {
             throw new IllegalArgumentException();
         }
     }
+
+    public static void validateNumberRange(int number) {
+        if (number < 1 || number > 31) {
+            throw new IllegalArgumentException();
+        }
+    }
 }

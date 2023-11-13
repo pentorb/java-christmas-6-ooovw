@@ -11,6 +11,8 @@ public class InputView {
             try {
                 String input = Console.readLine();
                 Validation.validateNumber(input);
+                Validation.validateNumberRange(Integer.parseInt(input));
+
                 return Integer.parseInt(input.trim());
             } catch (IllegalArgumentException e) {
                 System.out.println("[ERROR] 유효하지 않은 날짜입니다. 다시 입력해 주세요.");
