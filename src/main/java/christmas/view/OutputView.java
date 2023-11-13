@@ -12,8 +12,8 @@ public class OutputView {
         System.out.println("<주문 메뉴>");
 
         for (int i = 0; i < orderedMenu.size(); i++) {
-            System.out.println(orderedMenu.get(i));
-            System.out.printf(" %d개", userOrder.get(orderedMenu.get(i)));
+            System.out.print(orderedMenu.get(i));
+            System.out.printf(" %d개\n", userOrder.get(orderedMenu.get(i)));
         }
     }
 
