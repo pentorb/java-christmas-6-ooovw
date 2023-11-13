@@ -106,4 +106,10 @@ public class OutputView {
         String number = priceFormat.format(price);
         System.out.println(number + "원");
     }
+
+    public void printBadge(String badge) {
+        System.out.println();
+        System.out.println("<12월 이벤트 배지");
+        System.out.println(badge);
+    }
 }
