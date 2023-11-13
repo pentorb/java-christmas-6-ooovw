@@ -14,6 +14,8 @@ public class Order {
 
             userOrder.put(orderInformation.get(0), Integer.valueOf(orderInformation.get(1)));
         }
+
+        arrangeOrder();
     }
 
     public static void arrangeOrder() {
