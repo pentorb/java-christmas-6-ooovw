@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 public class OutputView {
-    public void printMenu(List<String> orderedMenu, Map<String, Integer> userOrder) {
+    public static void printMenu(List<String> orderedMenu, Map<String, Integer> userOrder) {
         System.out.println();
         System.out.println("<주문 메뉴>");
 
@@ -17,7 +17,7 @@ public class OutputView {
         }
     }
 
-    public void printAmountOfPrice(int price) {
+    public static void printAmountOfPrice(int price) {
         System.out.println();
         System.out.println("<할인 전 총주문 금액>");
 
@@ -26,7 +26,7 @@ public class OutputView {
         System.out.println(notDiscountedPrice + "원");
     }
 
-    public void printPresent(int price) {
+    public static void printPresent(int price) {
         System.out.println();
         System.out.println("<증정 메뉴>");
 
@@ -39,7 +39,7 @@ public class OutputView {
         }
     }
 
-    public void printDiscountMessage() {
+    public static void printDiscountMessage() {
         System.out.println();
         System.out.println("<혜택 내역>");
 
@@ -48,7 +48,7 @@ public class OutputView {
         }
     }
 
-    public void printDDayDiscount(int discount) {
+    public static void printDDayDiscount(int discount) {
         if (discount > 0) {
             DecimalFormat discountFormat = new DecimalFormat("-###,##0");
             String number = discountFormat.format(discount);
@@ -56,7 +56,7 @@ public class OutputView {
         }
     }
 
-    public void printWeekdayDiscount(int discount) {
+    public static void printWeekdayDiscount(int discount) {
         if (discount > 0) {
             DecimalFormat discountFormat = new DecimalFormat("-###,##0");
             String number = discountFormat.format(discount);
@@ -64,7 +64,7 @@ public class OutputView {
         }
     }
 
-    public void printWeekendDiscount(int discount) {
+    public static void printWeekendDiscount(int discount) {
         if (discount > 0) {
             DecimalFormat discountFormat = new DecimalFormat("-###,##0");
             String number = discountFormat.format(discount);
@@ -72,7 +72,7 @@ public class OutputView {
         }
     }
 
-    public void printSpecialDiscount(int discount) {
+    public static void printSpecialDiscount(int discount) {
         if (discount > 0) {
             DecimalFormat discountFormat = new DecimalFormat("-###,##0");
             String number = discountFormat.format(discount);
@@ -80,7 +80,7 @@ public class OutputView {
         }
     }
 
-    public void printPresentDiscount(int discount) {
+    public static void printPresentDiscount(int discount) {
         if (discount > 0) {
             DecimalFormat discountFormat = new DecimalFormat("-###,##0");
             String number = discountFormat.format(discount);
@@ -88,7 +88,7 @@ public class OutputView {
         }
     }
 
-    public void printAmountOfDiscount(int discount) {
+    public static void printAmountOfDiscount(int discount) {
         System.out.println();
         System.out.println("<총혜택 금액>");
 
@@ -97,7 +97,7 @@ public class OutputView {
         System.out.println(number + "원");
     }
 
-    public void printTotalPrice(int price) {
+    public static void printTotalPrice(int price) {
         System.out.println();
         System.out.println("<할인 후 예상 결제 금액>");
 
@@ -106,7 +106,7 @@ public class OutputView {
         System.out.println(number + "원");
     }
 
-    public void printBadge(String badge) {
+    public static void printBadge(String badge) {
         System.out.println();
         System.out.println("<12월 이벤트 배지");
         System.out.println(badge);
