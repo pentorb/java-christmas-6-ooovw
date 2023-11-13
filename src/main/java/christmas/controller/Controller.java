@@ -8,6 +8,12 @@ import christmas.view.InputView;
 import christmas.view.OutputView;
 
 public class Controller {
+    public static void runPlanner() {
+        startPlanner();
+        calculateBenefit();
+        showDetail();
+    }
+
     private static void startPlanner() {
         OutputView.printWelcome();
 
