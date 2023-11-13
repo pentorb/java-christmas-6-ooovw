@@ -24,6 +24,7 @@ public class Controller {
     private static void calculateBenefit() {
         Price.findPrice();
         Discount.receivePresent();
+        Discount.addDiscount();
         Badge.receiveBadge();
     }
 
