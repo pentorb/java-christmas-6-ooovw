@@ -11,7 +11,7 @@ public class Discount {
     public static int present;
 
 
-    private void receiveDDayDiscount(int date) {
+    private static void receiveDDayDiscount(int date) {
         if (date <= 25) {
             dDayDiscount = 1000;
             for (int i = 1; i < date; i++) {
@@ -24,21 +24,21 @@ public class Discount {
         }
     }
 
-    private void receiveWeekdayDiscount(int date) {
+    private static void receiveWeekdayDiscount(int date) {
         if ((Utils.getDayOfWeek(date) <= 4) || (Utils.getDayOfWeek(date) == 7)) {
             MenuCategory.countDessert();
             weekdayDiscount = 2023 * MenuCategory.amountOfDessert;
         }
     }
 
-    private void receiveWeekendDiscount(int date) {
+    private static void receiveWeekendDiscount(int date) {
         if ((Utils.getDayOfWeek(date) > 4) && (Utils.getDayOfWeek(date) < 7)) {
             MenuCategory.countMainDish();
             weekendDiscount = 2023 * MenuCategory.amountOfMainDish;
         }
     }
 
-    private void receiveSpecialDiscount(int date) {
+    private static void receiveSpecialDiscount(int date) {
         specialDiscount = 0;
         
         if ((Utils.getDayOfWeek(date) == 7) || (date == 25)) {
@@ -46,7 +46,7 @@ public class Discount {
         }
     }
 
-    private void receivePresent() {
+    private static void receivePresent() {
         present = 0;
 
         if (Price.amountOfPrice >= 120_000) {
@@ -54,7 +54,7 @@ public class Discount {
         }
     }
 
-    public void receiveDiscount(int date) {
+    public static void receiveDiscount(int date) {
         receiveDDayDiscount(date);
         receiveWeekdayDiscount(date);
         receiveWeekendDiscount(date);
