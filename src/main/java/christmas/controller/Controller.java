@@ -21,6 +21,18 @@ public class Controller {
         Badge.receiveBadge();
     }
 
+    private static void showDetail() {
+        OutputView.printDate(Discount.dateOfDay);
+
+        OutputView.printMenu(Order.orderedMenu, Order.userOrder);
+        OutputView.printAmountOfPrice(Price.amountOfPrice);
+        OutputView.printPresent(Price.amountOfPrice);
+
+        showDiscount();
+        OutputView.printTotalPrice(Price.totalPrice);
+        OutputView.printBadge(Badge.shapeOfBadge);
+    }
+
     private static void showDiscount() {
         OutputView.printDiscountMessage();
         OutputView.printDDayDiscount(Discount.dDayDiscount);
