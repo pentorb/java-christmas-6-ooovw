@@ -67,4 +67,12 @@ public class OutputView {
             System.out.print("주말 할인: " + number + "원\n");
         }
     }
+
+    public void printSpecialDiscount(int discount) {
+        if (discount > 0) {
+            DecimalFormat discountFormat = new DecimalFormat("-###,##0");
+            String number = discountFormat.format(discount);
+            System.out.print("특별 할인: " + number + "원\n");
+        }
+    }
 }
