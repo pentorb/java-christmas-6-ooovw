@@ -89,4 +89,13 @@ public class OutputView {
             System.out.print("증정 이벤트: " + number + "원\n");
         }
     }
+
+    public void printAmountOfDiscount(int discount) {
+        System.out.println();
+        System.out.println("<총혜택 금액>");
+        DecimalFormat discountFormat = new DecimalFormat("-###,##0");
+        String number = discountFormat.format(discount);
+        System.out.println(number + "원");
+        System.out.println();
+    }
 }
