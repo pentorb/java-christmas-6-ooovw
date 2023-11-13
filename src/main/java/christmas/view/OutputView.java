@@ -51,4 +51,12 @@ public class OutputView {
             System.out.print("크리스마스 디데이 할인: " + number + "원\n");
         }
     }
+
+    public void printWeekdayDiscount(int discount) {
+        if (discount > 0) {
+            DecimalFormat discountFormat = new DecimalFormat("-###,##0");
+            String number = discountFormat.format(discount);
+            System.out.print("평일 할인: " + number + "원\n");
+        }
+    }
 }
