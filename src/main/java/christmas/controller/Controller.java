@@ -20,4 +20,14 @@ public class Controller {
         Discount.receivePresent();
         Badge.receiveBadge();
     }
+
+    private static void showDiscount() {
+        OutputView.printDiscountMessage();
+        OutputView.printDDayDiscount(Discount.dDayDiscount);
+        OutputView.printWeekdayDiscount(Discount.weekdayDiscount);
+        OutputView.printWeekendDiscount(Discount.weekendDiscount);
+        OutputView.printSpecialDiscount(Discount.specialDiscount);
+        OutputView.printPresentDiscount(Discount.present);
+        OutputView.printAmountOfDiscount(Discount.amountOfDiscount);
+    }
 }
