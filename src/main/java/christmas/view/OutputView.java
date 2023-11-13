@@ -98,4 +98,12 @@ public class OutputView {
         System.out.println(number + "원");
         System.out.println();
     }
+
+    public void printTotalPrice(int price) {
+        System.out.println("<할인 후 예상 결제 금액>");
+
+        DecimalFormat priceFormat = new DecimalFormat("###,##0");
+        String number = priceFormat.format(price);
+        System.out.println(number + "원");
+    }
 }
