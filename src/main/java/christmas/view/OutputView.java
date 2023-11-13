@@ -8,27 +8,26 @@ import java.util.Map;
 
 public class OutputView {
     public void printMenu(List<String> orderedMenu, Map<String, Integer> userOrder) {
+        System.out.println();
         System.out.println("<주문 메뉴>");
 
         for (int i = 0; i < orderedMenu.size(); i++) {
             System.out.println(orderedMenu.get(i));
             System.out.printf(" %d개", userOrder.get(orderedMenu.get(i)));
         }
-
-        System.out.println();
     }
 
     public void printAmountOfPrice(int price) {
+        System.out.println();
         System.out.println("<할인 전 총주문 금액>");
 
         DecimalFormat priceFormat = new DecimalFormat("###,##0");
         String notDiscountedPrice = priceFormat.format(price);
         System.out.println(notDiscountedPrice + "원");
-
-        System.out.println();
     }
 
     public void printPresent(int price) {
+        System.out.println();
         System.out.println("<증정 메뉴>");
 
         if (price == 0) {
@@ -38,12 +37,11 @@ public class OutputView {
         if (price > 0) {
             System.out.println("샴페인 1개");
         }
-
-        System.out.println();
     }
 
     public void printDiscountMessage() {
-        System.out.println("<혜택 내역>\n");
+        System.out.println();
+        System.out.println("<혜택 내역>");
 
         if (Discount.amountOfDiscount == 0) {
             System.out.println("없음");
@@ -93,13 +91,14 @@ public class OutputView {
     public void printAmountOfDiscount(int discount) {
         System.out.println();
         System.out.println("<총혜택 금액>");
+
         DecimalFormat discountFormat = new DecimalFormat("-###,##0");
         String number = discountFormat.format(discount);
         System.out.println(number + "원");
-        System.out.println();
     }
 
     public void printTotalPrice(int price) {
+        System.out.println();
         System.out.println("<할인 후 예상 결제 금액>");
 
         DecimalFormat priceFormat = new DecimalFormat("###,##0");
