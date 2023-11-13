@@ -22,10 +22,12 @@ public class Controller {
     }
 
     private static void calculateBenefit() {
-        Price.findPrice();
+        Price.addPrice();
         Discount.receivePresent();
         Discount.addDiscount();
         Badge.receiveBadge();
+
+        Price.findTotalPrice();
     }
 
     private static void showDetail() {

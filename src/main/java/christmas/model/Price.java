@@ -27,9 +27,4 @@ public class Price {
     public static void findTotalPrice() {
         totalPrice = amountOfPrice - Discount.amountOfDiscount;
     }
-
-    public static void findPrice() {
-        addPrice();
-        findTotalPrice();
-    }
 }
