@@ -55,16 +55,16 @@ public class Discount {
         }
     }
 
-    public static void receiveDiscountOfDate(int date) {
+    public static void receiveDate(int date) {
         dateOfDay = date;
-
-        receiveDDayDiscount(date);
-        receiveWeekdayDiscount(date);
-        receiveWeekendDiscount(date);
-        receiveSpecialDiscount(date);
     }
 
     public static void addDiscount() {
+        receiveDDayDiscount(dateOfDay);
+        receiveWeekdayDiscount(dateOfDay);
+        receiveWeekendDiscount(dateOfDay);
+        receiveSpecialDiscount(dateOfDay);
+
         amountOfDiscount = dDayDiscount + weekdayDiscount + weekendDiscount + specialDiscount + present;
     }
 }

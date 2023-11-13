@@ -17,7 +17,7 @@ public class Controller {
     private static void startPlanner() {
         OutputView.printWelcome();
 
-        Discount.receiveDiscountOfDate(InputView.readDate());
+        Discount.receiveDate(InputView.readDate());
         Order.receiveOrder(InputView.readOrder());
     }
 
