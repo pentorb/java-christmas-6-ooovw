@@ -9,6 +9,7 @@ public class Discount {
     public static int weekendDiscount;
     public static int specialDiscount;
     public static int present;
+    public static int dateOfDay;
 
 
     private static void receiveDDayDiscount(int date) {
@@ -55,6 +56,8 @@ public class Discount {
     }
 
     public static void receiveDiscountOfDate(int date) {
+        dateOfDay = date;
+
         receiveDDayDiscount(date);
         receiveWeekdayDiscount(date);
         receiveWeekendDiscount(date);
