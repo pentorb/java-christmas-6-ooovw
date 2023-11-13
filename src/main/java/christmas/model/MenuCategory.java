@@ -20,6 +20,8 @@ public class MenuCategory {
     }
 
     public static void countDessert() {
+        categorizeMenu();
+        
         for (int i = 0; i < dessert.size(); i++)
             if (Order.userOrder.containsKey(dessert.get(i))) {
                 amountOfDessert += Order.userOrder.get(dessert.get(i));
