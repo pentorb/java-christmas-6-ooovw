@@ -54,12 +54,10 @@ public class Discount {
         }
     }
 
-    public static void receiveDiscount(int date) {
+    public static void receiveDiscountOfDate(int date) {
         receiveDDayDiscount(date);
         receiveWeekdayDiscount(date);
         receiveWeekendDiscount(date);
         receiveSpecialDiscount(date);
-
-        amountOfDiscount = dDayDiscount + weekdayDiscount + weekendDiscount + specialDiscount + present;
     }
 }
