@@ -92,9 +92,15 @@ public class OutputView {
         System.out.println();
         System.out.println("<총혜택 금액>");
 
-        DecimalFormat discountFormat = new DecimalFormat("-###,##0");
-        String number = discountFormat.format(discount);
-        System.out.println(number + "원");
+        if (discount > 0) {
+            DecimalFormat discountFormat = new DecimalFormat("-###,##0");
+            String number = discountFormat.format(discount);
+            System.out.println(number + "원");
+        }
+
+        if (discount == 0) {
+            System.out.println(discount + "원");
+        }
     }
 
     public static void printTotalPrice(int price) {
