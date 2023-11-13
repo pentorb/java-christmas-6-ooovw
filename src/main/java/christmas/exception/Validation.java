@@ -9,4 +9,10 @@ public class Validation {
         }
         return true;
     }
+
+    public static void validateNumber(String input) {
+        if (!isNumber(input)) {
+            throw new IllegalArgumentException();
+        }
+    }
 }

@@ -1,12 +1,21 @@
 package christmas.view;
 
 import camp.nextstep.edu.missionutils.Console;
+import christmas.exception.Validation;
 
 public class InputView {
     public static int readDate() {
         System.out.println("12월 중 식당 예상 방문 날짜는 언제인가요? (숫자만 입력해 주세요!)");
-        String input = Console.readLine();
-        return Integer.parseInt(input.trim());
+
+        while (true) {
+            try {
+                String input = Console.readLine();
+                Validation.validateNumber(input);
+                return Integer.parseInt(input.trim());
+            } catch (IllegalArgumentException e) {
+                System.out.println("[ERROR] 유효하지 않은 날짜입니다. 다시 입력해 주세요.");
+            }
+        }
     }
 
     public static String readOrder() {
