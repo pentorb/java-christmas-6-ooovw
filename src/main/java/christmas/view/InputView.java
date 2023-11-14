@@ -25,6 +25,7 @@ public class InputView {
         while (true) {
             try {
                 String input = Console.readLine();
+                Validation.validateInvalidFormat(input);
                 Validation.validateMenu(input);
                 Validation.validateMenuNumber(input);
                 Validation.validateDuplicateMenu(input);

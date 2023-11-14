@@ -29,6 +29,12 @@ public class Validation {
         }
     }
 
+    public static void validateInvalidFormat(String input) {
+        if (Utils.isInvalidFormat(input)) {
+            throw new IllegalArgumentException();
+        }
+    }
+
     public static void validateDuplicateMenu(String input) {
         if (Utils.isDuplicateMenu(input)) {
             throw new IllegalArgumentException();
