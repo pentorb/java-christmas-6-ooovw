@@ -1,7 +1,7 @@
 package christmas.view;
 
 import camp.nextstep.edu.missionutils.Console;
-import christmas.exception.Validation;
+import christmas.validation.Validation;
 
 public class InputView {
     public static int readDate() {
