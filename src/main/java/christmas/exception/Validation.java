@@ -44,4 +44,10 @@ public class Validation {
 
         return false;
     }
+
+    public static void validateMenu(String input) {
+        if (!isMenu(input)) {
+            throw new IllegalArgumentException();
+        }
+    }
 }
