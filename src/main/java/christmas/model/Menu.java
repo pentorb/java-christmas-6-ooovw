@@ -43,6 +43,7 @@ public enum Menu {
     public static void prepareMenu() {
         putNames();
         arrangeNameOfMenu();
+        MenuCategory.categorizeMenu();
     }
 
     public static void putNames(){
