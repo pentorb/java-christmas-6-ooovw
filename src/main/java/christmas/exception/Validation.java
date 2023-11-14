@@ -33,8 +33,8 @@ public class Validation {
         }
     }
 
-    public static void validateMaximum(String input) {
-        if (!Utils.isMaximum(input)) {
+    public static void validateOutOfRange(String input) {
+        if (Utils.isOutOfRange(input)) {
             throw new IllegalArgumentException();
         }
     }

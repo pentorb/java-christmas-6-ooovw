@@ -84,7 +84,7 @@ public class Utils {
         return false;
     }
 
-    public static boolean isMaximum(String input) {
+    public static boolean isOutOfRange(String input) {
         List<String> separatedOrder = Arrays.asList(input.split(","));
         int orders = 0;
 
@@ -93,7 +93,7 @@ public class Utils {
             orders += Integer.parseInt(orderInformation.get(1));
         }
 
-        if (orders <= 20) {
+        if (orders > 20) {
             return true;
         }
 
