@@ -29,6 +29,7 @@ public class InputView {
                 Validation.validateMenuNumber(input);
                 Validation.validateDuplicateMenu(input);
                 Validation.validateMaximum(input);
+                Validation.validateDrinkOnly(input);
 
                 return input.trim();
             } catch (IllegalArgumentException e) {

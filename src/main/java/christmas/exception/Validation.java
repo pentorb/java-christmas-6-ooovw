@@ -38,4 +38,10 @@ public class Validation {
             throw new IllegalArgumentException();
         }
     }
+
+    public static void validateDrinkOnly(String input) {
+        if (Utils.isDrinkOnly(input)) {
+            throw new IllegalArgumentException();
+        }
+    }
 }
