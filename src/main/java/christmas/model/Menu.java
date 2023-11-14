@@ -40,6 +40,11 @@ public enum Menu {
         return price;
     }
 
+    public static void prepareMenu() {
+        putNames();
+        arrangeNameOfMenu();
+    }
+
     public static void putNames(){
         constantOfMenu = Arrays.asList(MUSHROOM_SOUP, TAPAS, CAESAR_SALAD, T_BONE_STEAK, BARBEQUE_RIB, SEAFOOD_PASTA, CHRISTMAS_PASTA, CHOCO_CAKE, ICE_CREAM, ZERO_COKE, RED_WINE, CHAMPAGNE);
     }
