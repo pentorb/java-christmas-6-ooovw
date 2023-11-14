@@ -80,10 +80,10 @@ public class Utils {
         HashSet<String> uniqueOrder = new HashSet<>(orders);
 
         if (separatedOrder.size() == uniqueOrder.size()) {
-            return true;
+            return false;
         }
 
-        return false;
+        return true;
     }
 
     public static boolean isOutOfRange(String input) {

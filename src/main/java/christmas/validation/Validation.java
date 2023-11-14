@@ -30,7 +30,7 @@ public class Validation {
     }
 
     public static void validateDuplicateMenu(String input) {
-        if (!Utils.isDuplicateMenu(input)) {
+        if (Utils.isDuplicateMenu(input)) {
             throw new IllegalArgumentException();
         }
     }
