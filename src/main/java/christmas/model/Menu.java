@@ -19,10 +19,10 @@ public enum Menu {
     CHAMPAGNE("샴페인", 25_000);
 
     public static List<Menu> constantOfMenu = new ArrayList<>();
-    public static List<String> nameOfMenu = new ArrayList<>();
+    public static final List<String> nameOfMenu = new ArrayList<>();
 
-    private String name;
-    private int price;
+    private final String name;
+    private final int price;
 
     Menu(String name, int price) {
         this.name = name;
