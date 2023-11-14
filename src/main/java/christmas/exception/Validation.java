@@ -64,10 +64,16 @@ public class Validation {
             }
         }
 
-        if (vaildCount == separatedOrder.size()) {
+        if (vaildCount == separatedOrder.size()) { //메뉴 형식이 예시와 다를 경우 false를 반환하게됨
             return true;
         }
 
         return false;
+    }
+
+    public static void validateMenuNumber(String input) {
+        if (!isMenuNumber(input)) {
+            throw new IllegalArgumentException();
+        }
     }
 }

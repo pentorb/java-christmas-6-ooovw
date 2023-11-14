@@ -26,7 +26,8 @@ public class InputView {
             try {
                 String input = Console.readLine();
                 Validation.validateMenu(input);
-                
+                Validation.validateMenuNumber(input);
+
                 return input.trim();
             } catch (IllegalArgumentException e) {
                 System.out.println("[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요.");
