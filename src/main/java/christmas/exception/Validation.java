@@ -119,4 +119,10 @@ public class Validation {
             throw new IllegalArgumentException();
         }
     }
+
+    public static void validateMaximum(String input) {
+        if (!isMaximum(input)) {
+            throw new IllegalArgumentException();
+        }
+    }
 }

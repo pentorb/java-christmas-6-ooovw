@@ -28,6 +28,7 @@ public class InputView {
                 Validation.validateMenu(input);
                 Validation.validateMenuNumber(input);
                 Validation.validateDuplicateMenu(input);
+                Validation.validateMaximum(input);
 
                 return input.trim();
             } catch (IllegalArgumentException e) {
