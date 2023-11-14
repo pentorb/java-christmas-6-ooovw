@@ -99,4 +99,22 @@ public class Utils {
 
         return false;
     }
+
+    public static boolean isDrinkOnly(String input) {
+        List<String> separatedOrder = Arrays.asList(input.split(","));
+        int amountOfDrink = 0;
+
+        for (int i = 0; i < separatedOrder.size(); i++) {
+            List<String> orderInformation = Arrays.asList(separatedOrder.get(i).split("-"));
+            if (MenuCategory.drink.contains(orderInformation.get(0))) {
+                amountOfDrink += 1;
+            }
+        }
+
+        if (amountOfDrink == separatedOrder.size()) {
+            return true;
+        }
+
+        return false;
+    }
 }
