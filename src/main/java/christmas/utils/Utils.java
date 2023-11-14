@@ -61,10 +61,22 @@ public class Utils {
             }
         }
 
-        if (vaildCount == separatedOrder.size()) { //메뉴 형식이 예시와 다를 경우 false를 반환하게됨
+        if (vaildCount == separatedOrder.size()) {
             return true;
         }
 
+        return false;
+    }
+
+    public static boolean isInvalidFormat(String input) {
+        List<String> separatedOrder = Arrays.asList(input.split(","));
+
+        for (int i = 0; i < separatedOrder.size(); i++) {
+            if (!separatedOrder.get(i).contains("-")) {
+                return true;
+            }
+        }
+        
         return false;
     }
 
