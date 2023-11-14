@@ -25,6 +25,15 @@ public class Controller {
         Discount.addDiscount();
         Badge.receiveBadge();
 
+        if (Price.amountOfPrice < 10_000) {
+            Discount.present = 0;
+            Discount.dDayDiscount =0;
+            Discount.weekdayDiscount = 0;
+            Discount.weekendDiscount = 0;
+            Discount.specialDiscount = 0;
+            Discount.amountOfDiscount = 0;
+        }
+
         Price.findTotalPrice();
     }
 
