@@ -5,7 +5,6 @@ public class Price {
     public static int totalPrice;
 
     public static int getPriceOfMenu(String menu) {
-        Menu.putNames();
         int priceOfMenu = 0;
 
         for (int i = 0; i < Menu.constantOfMenu.size(); i++){
