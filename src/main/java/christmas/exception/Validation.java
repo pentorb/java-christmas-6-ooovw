@@ -2,7 +2,9 @@ package christmas.exception;
 
 import christmas.model.Menu;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 
 public class Validation {
@@ -65,6 +67,24 @@ public class Validation {
         }
 
         if (vaildCount == separatedOrder.size()) { //메뉴 형식이 예시와 다를 경우 false를 반환하게됨
+            return true;
+        }
+
+        return false;
+    }
+
+    public static boolean isDuplicateMenu(String input) {
+        List<String> separatedOrder = Arrays.asList(input.split(","));
+        List<String> orders = new ArrayList<>();
+
+        for (int i = 0; i < separatedOrder.size(); i++) {
+            List<String> orderInformation = Arrays.asList(separatedOrder.get(i).split("-"));
+                        orders.add(orderInformation.get(0));
+        }
+
+        HashSet<String> uniqueOrder = new HashSet<>(orders);
+
+        if (separatedOrder.size() == uniqueOrder.size()) {
             return true;
         }
 
