@@ -96,4 +96,10 @@ public class Validation {
             throw new IllegalArgumentException();
         }
     }
+
+    public static void validateDuplicateMenu(String input) {
+        if (!isDuplicateMenu(input)) {
+            throw new IllegalArgumentException();
+        }
+    }
 }

@@ -27,6 +27,7 @@ public class InputView {
                 String input = Console.readLine();
                 Validation.validateMenu(input);
                 Validation.validateMenuNumber(input);
+                Validation.validateDuplicateMenu(input);
 
                 return input.trim();
             } catch (IllegalArgumentException e) {
