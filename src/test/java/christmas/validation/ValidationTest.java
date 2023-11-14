@@ -31,6 +31,12 @@ public class ValidationTest {
     }
 
     @Test
+    void 잘못된_주문_형식_예외처리() {
+        assertThatThrownBy(() -> Validation.validateInvalidFormat("해산물파스타=2,레드와인=1,초코케이크=2"))
+                .isInstanceOf(IllegalArgumentException.class);
+    }
+
+    @Test
     void 중복된_메뉴_예외처리() {
         assertThatThrownBy(() -> Validation.validateDuplicateMenu("해산물파스타-2,레드와인-1,해산물파스타-1"))
                 .isInstanceOf(IllegalArgumentException.class);

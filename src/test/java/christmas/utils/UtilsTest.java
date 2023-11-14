@@ -45,6 +45,11 @@ public class UtilsTest {
     }
 
     @Test
+    void 유효하지_않은_형식() {
+        assertThat(isInvalidFormat("해산물파스타=2,레드와인=1,초코케이크=2")).isTrue();
+    }
+
+    @Test
     void 중복된_메뉴() {
         assertThat(isDuplicateMenu("해산물파스타-2,레드와인-1,해산물파스타-2")).isTrue();
     }
