@@ -5,10 +5,10 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MenuCategory {
-    public static List<String> appetizer = new ArrayList<String>();
-    public static List<String> mainDish = new ArrayList<String>();
-    public static List<String> dessert = new ArrayList<String>();
-    public static List<String> drink = new ArrayList<String>();
+    public static List<String> appetizer = new ArrayList<>();
+    public static List<String> mainDish = new ArrayList<>();
+    public static List<String> dessert = new ArrayList<>();
+    public static List<String> drink = new ArrayList<>();
     public static int amountOfDessert = 0;
     public static int amountOfMainDish = 0;
 

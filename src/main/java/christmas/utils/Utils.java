@@ -2,7 +2,6 @@ package christmas.utils;
 
 import christmas.model.Menu;
 import christmas.model.MenuCategory;
-import christmas.model.Order;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;

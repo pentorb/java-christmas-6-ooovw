@@ -3,7 +3,7 @@ package christmas.model;
 import java.util.*;
 
 public class Order {
-    public static Map<String, Integer> userOrder = new HashMap<String, Integer>();
+    public static Map<String, Integer> userOrder = new HashMap<>();
     public static List<String> orderedMenu;
 
     public static void receiveOrder(String input) {
