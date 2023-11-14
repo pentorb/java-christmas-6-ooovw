@@ -50,4 +50,24 @@ public class Validation {
             throw new IllegalArgumentException();
         }
     }
+
+    public static boolean isMenuNumber(String input) {
+        List<String> separatedOrder = Arrays.asList(input.split(","));
+        int vaildCount = 0;
+
+        for (int i = 0; i < separatedOrder.size(); i++) {
+            List<String> orderInformation = Arrays.asList(separatedOrder.get(i).split("-"));
+            String numberOfMenu = orderInformation.get(1);
+
+            if (isNumber(numberOfMenu) && Integer.parseInt(numberOfMenu) >= 1) {
+                vaildCount += 1;
+            }
+        }
+
+        if (vaildCount == separatedOrder.size()) {
+            return true;
+        }
+
+        return false;
+    }
 }
