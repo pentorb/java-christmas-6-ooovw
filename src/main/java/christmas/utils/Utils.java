@@ -11,9 +11,12 @@ import java.util.HashSet;
 import java.util.List;
 
 public class Utils {
+    private static final int YEAR_OF_EVENT = 2023;
+    private static final int MONTH_OF_EVENT = 12;
+    private static final int MAXIMUM_ORDER = 20;
 
     public static int getDayOfWeek(int date) {
-        LocalDate dateOfVisit = LocalDate.of(2023, 12, date);
+        LocalDate dateOfVisit = LocalDate.of(YEAR_OF_EVENT, MONTH_OF_EVENT, date);
         DayOfWeek dayOfVisit = dateOfVisit.getDayOfWeek();
         return dayOfVisit.getValue();
     }
@@ -92,7 +95,7 @@ public class Utils {
             orders += Integer.parseInt(orderInformation.get(1));
         }
 
-        if (orders > 20) {
+        if (orders > MAXIMUM_ORDER) {
             return true;
         }
 

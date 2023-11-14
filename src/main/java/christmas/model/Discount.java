@@ -10,47 +10,55 @@ public class Discount {
     public static int specialDiscount;
     public static int present;
     public static int dateOfDay;
+    private static final int CHRISTMAS = 25;
+    private static final int SUNDAY = 7;
+    private static final int THURSDAY = 4;
+    private static final int START_OF_DISCOUNT = 1000;
+    private static final int SPECIAL_DISCOUNT = 1000;
+    private static final int DISCOUNT_PER_DAY = 100;
+    private static final int DISCOUNT_OF_WEEK = 2023;
+    private static final int MINIMUM_PRICE_FOR_PRESENT = 120_000;
 
 
     private static void receiveDDayDiscount(int date) {
-        if (date <= 25) {
-            dDayDiscount = 1000;
+        if (date <= CHRISTMAS) {
+            dDayDiscount = START_OF_DISCOUNT;
             for (int i = 1; i < date; i++) {
-                dDayDiscount += 100;
+                dDayDiscount += DISCOUNT_PER_DAY;
             }
         }
 
-        if (date > 25) {
+        if (date > CHRISTMAS) {
             dDayDiscount = 0;
         }
     }
 
     private static void receiveWeekdayDiscount(int date) {
-        if ((Utils.getDayOfWeek(date) <= 4) || (Utils.getDayOfWeek(date) == 7)) {
+        if ((Utils.getDayOfWeek(date) <= THURSDAY) || (Utils.getDayOfWeek(date) == SUNDAY)) {
             MenuCategory.countDessert();
-            weekdayDiscount = 2023 * MenuCategory.amountOfDessert;
+            weekdayDiscount = DISCOUNT_OF_WEEK * MenuCategory.amountOfDessert;
         }
     }
 
     private static void receiveWeekendDiscount(int date) {
-        if ((Utils.getDayOfWeek(date) > 4) && (Utils.getDayOfWeek(date) < 7)) {
+        if ((Utils.getDayOfWeek(date) > THURSDAY) && (Utils.getDayOfWeek(date) < SUNDAY)) {
             MenuCategory.countMainDish();
-            weekendDiscount = 2023 * MenuCategory.amountOfMainDish;
+            weekendDiscount = DISCOUNT_OF_WEEK * MenuCategory.amountOfMainDish;
         }
     }
 
     private static void receiveSpecialDiscount(int date) {
         specialDiscount = 0;
         
-        if ((Utils.getDayOfWeek(date) == 7) || (date == 25)) {
-            specialDiscount = 1000;
+        if ((Utils.getDayOfWeek(date) == SUNDAY) || (date == CHRISTMAS)) {
+            specialDiscount = SPECIAL_DISCOUNT;
         }
     }
 
     public static void receivePresent() {
         present = 0;
 
-        if (Price.amountOfPrice >= 120_000) {
+        if (Price.amountOfPrice >= MINIMUM_PRICE_FOR_PRESENT) {
             present = Menu.CHAMPAGNE.getPrice();
         }
     }

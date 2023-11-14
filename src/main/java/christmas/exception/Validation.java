@@ -3,6 +3,8 @@ package christmas.exception;
 import christmas.utils.Utils;
 
 public class Validation {
+    private static final int FIRST_DATE = 1;
+    private static final int LAST_DATE = 31;
     public static void validateNumber(String input) {
         if (!Utils.isNumber(input)) {
             throw new IllegalArgumentException();
@@ -10,7 +12,7 @@ public class Validation {
     }
 
     public static void validateNumberRange(int number) {
-        if (number < 1 || number > 31) {
+        if (number < FIRST_DATE || number > LAST_DATE) {
             throw new IllegalArgumentException();
         }
     }
