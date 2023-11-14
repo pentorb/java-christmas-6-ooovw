@@ -1,6 +1,7 @@
 package christmas.exception;
 
 import christmas.model.Menu;
+import christmas.model.Order;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -85,6 +86,22 @@ public class Validation {
         HashSet<String> uniqueOrder = new HashSet<>(orders);
 
         if (separatedOrder.size() == uniqueOrder.size()) {
+            return true;
+        }
+
+        return false;
+    }
+
+    public static boolean isMaximum(String input) {
+        List<String> separatedOrder = Arrays.asList(input.split(","));
+        int orders = 0;
+
+        for (int i = 0; i < separatedOrder.size(); i++) {
+            List<String> orderInformation = Arrays.asList(separatedOrder.get(i).split("-"));
+            orders += Integer.parseInt(orderInformation.get(1));
+        }
+
+        if (orders <= 20) {
             return true;
         }
 
