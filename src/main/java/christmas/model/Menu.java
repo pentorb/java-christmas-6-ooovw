@@ -20,6 +20,7 @@ public enum Menu {
     CHAMPAGNE("음료", "샴페인", 25_000);
 
     public static List<Menu> constantOfMenu = new ArrayList<>();
+    public static List<String> nameOfMenu = new ArrayList<>();
 
     private String category;
     private String name;
@@ -41,5 +42,11 @@ public enum Menu {
 
     public static void putNames(){
         constantOfMenu = Arrays.asList(MUSHROOM_SOUP, TAPAS, CAESAR_SALAD, T_BONE_STEAK, BARBEQUE_RIB, SEAFOOD_PASTA, CHRISTMAS_PASTA, CHOCO_CAKE, ICE_CREAM, ZERO_COKE, RED_WINE, CHAMPAGNE);
+    }
+
+    private static void arrangeNameOfMenu() {
+        for (int i = 0; i < Menu.constantOfMenu.size(); i++) {
+            nameOfMenu.add(Menu.constantOfMenu.get(i).getName());
+        }
     }
 }
