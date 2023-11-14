@@ -26,15 +26,15 @@ public class OutputView {
         System.out.println(notDiscountedPrice + "원");
     }
 
-    public static void printPresent(int price) {
+    public static void printPresent(int discount) {
         System.out.println();
         System.out.println("<증정 메뉴>");
 
-        if (price == 0) {
+        if (discount == 0) {
             System.out.println("없음");
         }
 
-        if (price > 0) {
+        if (discount > 0) {
             System.out.println("샴페인 1개");
         }
     }

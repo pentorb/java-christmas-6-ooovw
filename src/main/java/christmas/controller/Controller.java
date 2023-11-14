@@ -33,7 +33,7 @@ public class Controller {
 
         OutputView.printMenu(Order.orderedMenu, Order.userOrder);
         OutputView.printAmountOfPrice(Price.amountOfPrice);
-        OutputView.printPresent(Price.amountOfPrice);
+        OutputView.printPresent(Discount.present);
 
         showDiscount();
         OutputView.printTotalPrice(Price.totalPrice);
